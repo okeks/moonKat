@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, shrink-to-fit=no"
+         />
+      <meta name="keywords" content="HTML5 Template" />
+      <meta
+         name="Moonkat Finance"
+         content="Adding a spice to DeFi | Earn Rewards in $BNB  "
+         />
+      <title>MoonKat Finance</title>
+      <!--font-awesome icons link-->
+      <link rel="stylesheet" href="css/font-awesome.min.css" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/slick.css" />
+      <!--main style file-->
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/responsive.css" />
+      <link rel="stylesheet" href="css/custom__style.css" />
+      <link rel="stylesheet" href="./dist/flipdown.css" />
+     
+      <!-- Icon -->
+      <link rel="icon" type="image/png" href="images/moonKat.jpg">
+
+   </head>
+   <body id="dark-mode">
+      <!-- Preloader Part Start -->
+      <div class="preloader">
+         <div class="frame">
+            <div class="center">
+               <div class="dot-1"></div>
+               <div class="dot-2"></div>
+               <div class="dot-3"></div>
+            </div>
+         </div>
+      </div>
+      <!-- Preloader Part End -->
+      <section class="dashboard-content">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-3">
+                  <div   class="moonkat-sidebar">
+                     <div  class="logo-and-buy">
+                        <div  class="text-center"><img  src="images/moonKat.jpg" class="logo"></div>
+                        <div  class="mrat-text hide-on-mobile"> moonkat </div>
+                        <div  class="mrat-desc"> Earn BNB by Holding MKAT </div>
+                        <div  class="button-buy-mrat hide-on-mobile"><a  href="#" target="_blank" class="button-custom-new button-sidebar"><i  class="fa fa-shopping-cart"></i> BUY $MKAT </a></div>
+                     </div>
+                     <div  class="address-info">
+                        <div  class="text-1 hide-on-mobile"> Address information </div>
+                        <div  class="text-2 hide-on-mobile"> Your address </div>
+                        <div  class="text-3 hide-on-mobile" id="myAddress"> ....... </div>
+                        <div  class="text-4 hide-on-mobile"><a ><span  style="margin-right: 3px;"><i  class="fa fa-clone"></i></span> Copy address </a><a  href="https://bscscan.com/address/" id="bscscan" target="_blank" style="margin-left: 10px;"><span  style="margin-right: 3px;"><i  class="fa fa-clone"></i></span> View on BscScan Explorer </a></div>
+                        <div  class="text-2"> Your MKAT balance: </div>
+                        <div  class="text-3"> MKAT <span >
+                           0.00
+                           </span><br > ( <span >
+                           0.00
+                           </span> $) 
+                        </div>
+                     </div>
+                     <!-- <div  class="menu-info hide-on-mobile">
+                        <div  class="list-menu-info">
+                           <a  href="#" target="_blank" class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-home"></i></span></div>
+                              <div  class="p-2"> Homepage </div>
+                           </a>
+                           <a  href="#" target="_blank" class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-book-open"></i></span></div>
+                              <div  class="p-2"> Guide </div>
+                           </a>
+                           <a  class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-exclamation-triangle"></i></span></div>
+                              <div  class="p-2"> Disclaimer </div>
+                           </a>
+                           <a  href="#" target="_blank" class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-chart-bar"></i></span></div>
+                              <div  class="p-2"> Contract </div>
+                           </a>
+                           <a  href="#" target="_blank" class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-chart-line"></i></span></div>
+                              <div  class="p-2"> Chart </div>
+                           </a>
+                        </div>
+                     </div> -->
+                     <!-- <div  class="menu-info hide-on-mobile">
+                        <div  class="list-menu-info">
+                           <div  class="item-menu-info">
+                              <div  class="p-1"><span ><i  class="fa fa-globe-americas"></i></span></div>
+                              <div  class="p-2"> English </div>
+                           </div>
+                        </div>
+                        </div> -->
+                     <div  class="button-logout-wrapper hide-on-mobile " onclick="logout()" style="cursor: pointer;"><a  target="_blank" class="button-custom-new button-sidebar"><i  class="fa fa-sign-out" ></i> LOGOUT </a></div>
+                  </div>
+               </div>
+               <div class="col-sm-9">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <div class="mt-3">
+                                 <div class=" tab-card-header">
+                                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                                       <li class="nav-item">
+                                          <a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="One" aria-selected="true">Claim BNB</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="Two" aria-selected="false">Atomic Transfer</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Statistic</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-6">
+                           </div>
+                        </div>
+                        <div class=" mt-3 ">
+                           <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                 <div   class="claim-reward">
+                                  
+                                    <div  class="claim-reward-content">
+                                       <div  class="row">
+                                          <div  class="col-sm-3 p-1">
+                                             <div  class="title-1"> Reward Pool </div>
+                                             <div  class="image-content"><img  src="images/Max_trans.png" class="image-reward-pool"></div>
+                                             <div  class="title-2"> BNB <span  class="card-panel-num"> 0.00
+                                                
+                                                </span>
+                                             </div>
+                                             <br>
+                                             <div  class="title-2"> Gift : $MKAT  <span  class="card-panel-num"> 200
+                                                
+                                                </span>
+                                             </div>
+                                          </div>
+                                          <div  class="col-sm-9 p-2">
+                                             <div  class="title-1"> My reward: <span  class="bold">0.000000 BNB</span></div>
+                                             <div  class="title-noted"> *pool is always changing based on buys, sells, and collects by others, learn more here <span ><a  href="#" target="_blank"><i  class="fa fa-question-circle"></i></a></span></div>
+                                             <div  class="title-2"> You will be received 0.000000 BNB (after tax) </div>
+                                             <div  class="button-wrapper hide-on-mobile">
+                                                <div ><button  disabled="disabled" type="button" class="el-button button-custom-new el-button--default el-button--medium is-disabled"><span><i  class="fa fa-gift"></i> Claim My Reward </span></button></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       
+                                    </div>
+                                    <div  class="statistic-wrapper">
+                                       <div  class="item-statistic">
+                                          <div  class="row">
+                                             <div  class="col-sm-4 p-1"><img  src="images/Max_trans.png" class="img-icon"></div>
+                                             <div  class="col-sm-8 p-2">
+                                                <div  class="text-1"> Max Transaction Amount </div>
+                                                <div  class="text-2"><span >1,000,000</span><span  class="card-panel-num">
+                                                   MKAT
+                                                   </span><a ><i  class="el-icon-document-copy"></i></a><span > | </span><span >2.6</span><span  class="card-panel-num">
+                                                   BNB
+                                                   </span><a ><i  class="el-icon-document-copy"></i></a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div  class="item-statistic">
+                                          <div  class="row">
+                                             <div  class="col-sm-4 p-1"><img  src="images/Total_liquidity_pool.png" class="img-icon"></div>
+                                             <div  class="col-sm-8 p-2">
+                                                <div  class="text-1"> Total Liquidity Pool </div>
+                                                <div  class="text-2"><span >$</span><span  class="card-panel-num">
+                                                   3,044,668.38
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div  class="item-statistic">
+                                          <div  class="row">
+                                             <div  class="col-sm-4 p-1"><img  src="images/Total_liquidity_pool.png" class="img-icon"></div>
+                                             <div  class="col-sm-8 p-2">
+                                                <div  class="text-1"> Total BNB in liquidity pool </div>
+                                                <div  class="text-2"><span >0 </span><span  class="card-panel-num">
+                                                   BNB
+                                                   </span><!-- <span > | </span><span >BUSD</span><span  class="card-panel-num">
+                                                   1,522,334.19
+                                                   </span> -->
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div  class="item-statistic">
+                                          <div  class="row">
+                                             <div  class="col-sm-4 p-1"><img  src="images/moonKat.jpg" class="img-icon"></div>
+                                             <div  class="col-sm-8 p-2">
+                                                <div  class="text-1"> Current 100,000 MKAT price </div>
+                                                <div  class="text-2"><span ></span><span  class="card-panel-num">
+                                                   0.26 BNB
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div  class="hidden-input el-input el-input--medium"><input type="text" autocomplete="off" id="copy-value" class="el-input__inner"></div>
+                                    <div  class="hidden-input el-input el-input--medium"><input type="text" autocomplete="off" id="copy-value-bnb" class="el-input__inner"></div>
+                                    <div  class="sweet-modal-content sweet-modal-overlay theme-light sweet-modal-clickable" style="display: none;">
+                                       <div class="sweet-modal theme-light has-content is-alert">
+                                          <div class="sweet-box-actions">
+                                             <div class="sweet-action-close">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                   <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#292c34"></path>
+                                                </svg>
+                                             </div>
+                                          </div>
+                                          <div class="sweet-content">
+                                             <div class="sweet-content-content">
+                                                <div  class="content-dialog-claim-success">
+                                                   <div  class="main-title"> CLAIM REWARD SUCCESSFULLY! </div>
+                                                   <img  src="images/rat_hold_bnb.1d72ec18.png" class="image-logo-token">
+                                                   <div  class="reward-content">
+                                                      <div  class="text-1"> Your reward: 0.0000 BNB </div>
+                                                      <div  class="text-2"> Next collectable date: Mon, May 31, 2021 2:04 PM (at your time zone) </div>
+                                                   </div>
+                                                   <div  class="button-share-wrapper">
+                                                      <div > Share now </div>
+                                                      <div  class="p-1"><a    page-title="I just collected 0.0000 BNB at MoonRat.Finance! You should give it a try!
+                                                         #MoonRat #EarnBNB #BinanceSmartChain #BSC #MKAT" button-design="flat" has-icon="true" class="button-social twitter__design__flat"><i  class="icon-twitter"></i></a><a    button-design="flat" has-icon="true" class="button-social facebook__design__flat"><i  class="icon-facebook"></i></a></div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
+                                 <div   class="disruptive-transfer-wrapper">
+                                    <div  class="form-wrapper">
+                                       <div  class="text-main"> Disruptive Transfer between 2 wallets <span  style="margin-left: 10px;"><a  href="#" target="_blank"><i  class="el-icon-question"></i></a></span></div>
+                                       <form  class="el-form">
+                                          <div  class="el-form-item el-form-item--medium">
+                                             <div class="el-form-item__content">
+                                                <div  class="el-input el-input--medium"><input id="addressEnter" type="text" autocomplete="off" placeholder="Recipient (address)" class="el-input__inner"></div>
+                                             </div>
+                                          </div>
+                                          <div  class="el-form-item el-form-item--medium">
+                                             <div class="el-form-item__content">
+                                                <div  class="el-input el-input--medium"><input id="amount" type="text" autocomplete="off" placeholder="Amount (MKAT)" class="el-input__inner"></div>
+                                                <div  class="button-max"><button  type="button" class="el-button el-button--text el-button--medium"><span>Max</span></button></div>
+                                             </div>
+                                          </div>
+                                          <button  onclick="send()"  type="button" class="el-button button-send-disruptive el-button--primary el-button--medium"><i class="el-icon-position"></i><span>Send </span></button>
+                                       </form>
+                                    </div>
+                                    <div  class="sweet-modal-content sweet-modal-overlay theme-light sweet-modal-clickable" style="display: none;">
+                                       <div class="sweet-modal theme-light has-content is-alert">
+                                          <div class="sweet-box-actions">
+                                             <div class="sweet-action-close">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                   <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#292c34"></path>
+                                                </svg>
+                                             </div>
+                                          </div>
+                                          <div class="sweet-content">
+                                             <div class="sweet-content-content">
+                                                <div  class="content-dialog-claim-success">
+                                                   <img  src="images/anti_whales.25f69da2.png" style="width: 200px;">
+                                                   <div  class="text-1"> Congratulations! </div>
+                                                   <div  class="text-2"> You transferred <span  class="bnb">0.00 MKAT</span></div>
+                                                   <div  class="text-4"> to  </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+                                 <div   class="statistic-all">
+                                    <div  class="statistic-p1">
+                                       <div  class="row">
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Symbol </div>
+                                             <div  class="text-2"> MKAT </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Total Supply </div>
+                                             <div  class="text-2"> 1,000,000,000 MKAT </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Holders </div>
+                                             <div  class="text-2"> Updating... </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Token Address </div>
+                                             <div  class="text-2"><a  href="#" target="_blank" style="color: rgb(4, 171, 234);    font-size: 12px;word-break: break-all;">0x82ED53aB7b40A8268161a342EC67d80951179a09</a></div>
+                                          </div>
+                                       </div>
+                                       <div  class="row-2 hide-on-mobile"></div>
+                                       <div  class="row">
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Volume (24h) </div>
+                                             <div  class="text-2"> Updating... </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Market Cap </div>
+                                             <div  class="text-2"> $ <span  class="card-panel-num">
+                                                63,500
+                                                </span>
+                                             </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Current Circulating Supply </div>
+                                             <div  class="text-2"> Updating... </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <!-- <div  class="text-1"> Burned </div>
+                                             <div  class="text-2"> 8.56% </div> -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div  class="statistic-p1 mt-25">
+                                       <div  class="row">
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Current 100,000 MKAT  </div>
+                                             <div  class="text-2">  <span  class="card-panel-num">
+                                                0.26 BNB
+                                                </span>
+                                             </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Total Liquidity Pool </div>
+                                             <div  class="text-2">  <span  class="card-panel-num">
+                                                --------
+                                                </span>
+                                             </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Total BNB in liquidity pool </div>
+                                             <div  class="text-2"> <!-- BNB -->-------- <!-- <span  class="card-panel-num">
+                                                4,559.36
+                                                </span> | BUSD <span  class="card-panel-num">
+                                                1,498,706.96
+                                                </span> -->
+                                             </div>
+                                          </div>
+                                          <div  class="item-statistic col-sm-3">
+                                             <div  class="text-1"> Max Transaction Amount </div>
+                                             <div  class="text-2"> 1,000,000  <span  class="card-panel-num">
+                                                MKAT
+                                                </span><a ><i  class="el-icon-document-copy"></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div  class="hidden-input el-input el-input--medium">
+                                       <input type="text" autocomplete="off" id="copy-value-max" class="el-input__inner">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <br><br>
+      <!-- COPY_RIGHT AREA START -->
+      <section id="footer-btm">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="fop-btm text-center">
+                     <h2>Copyright &copy; 2021. All rights reserved.</h2>
+                  </div>
+                  <div class="fop-btm text-center"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- COPY_RIGHT AREA END -->
+      <!-- Optional JavaScript -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/jquery.isotope.min.js"></script>
+      <script src="js/circular.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="./dist/flipdown.js"></script>
+      <script src="./js/customJs.js"></script>
+   </body>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+   <!-- Initialize Firebase -->
+   <script src="/__/firebase/init.js"></script>
+</html>
+
+<script type="text/javascript">
+   function send(){
+      if($('#addressEnter').val() && $('#amount').val()){
+         alert('Transaction successful!');
+         window.location.reload()
+      }
+   }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script type="text/javascript">
+   function logout(){
+      document.cookie = "address" + "=" +'';
+      window.location.href= "connect-wallet-popup.html"
+   }
+</script>
+<script type="text/javascript">
+  // window.web3 = new Web3();
+  var ethereum = window.ethereum;
+  var web3 = new Web3(window.ethereum);
+
+// async function ConnectMetamask(){
+//     console.log(web3.eth.getAccounts[0])
+//     if (typeof window.ethereum !== 'undefined') {
+//         console.log('MetaMask is installed!');
+//        var accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+//        if(accounts[0]){
+//          setAccount(accounts[0]);
+//        }
+//     }else{
+//         alert('Please install MetaMask!');
+//     }
+// }
+$(document).ready(function(){
+   if(!getCookie('address')){
+      window.location.href= "connect-wallet-popup.html"
+   }  
+   setTimeout(function(){   
+         setAccount(web3.eth.accounts.givenProvider.selectedAddress)   
+   },2000)   
+})
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+function setAccount(add){
+  $('#connectBtn').hide();
+  var address =  (!add)?'':add.toString().substring(0,8)+'.....'+add.toString().substr(add.length-8);
+  $('#myAddress').html(address);
+  $('#bscscan').attr('href','https://bscscan.com/address/'+add);
+  
+  if(web3.currentProvider.chainId != '0x38' || !address){
+    logout()
+  }
+}
+
+
+ethereum.on('accountsChanged', function (accounts) {
+  setAccount(accounts[0]); 
+});
+
+ethereum.on('chainChanged',function (chainID) {
+  if(chainID == '0x38') {
+    window.location.href= "dashboard.html"
+  }else{
+    logout()
+  }
+});
+
+ethereum.on('close',function (accounts) {
+  logout()
+});
+
+// const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+// const account = accounts[0];
+</script>

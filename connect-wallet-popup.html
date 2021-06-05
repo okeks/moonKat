@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="keywords" content="HTML5 Template" />
+    <meta
+      name="Moonkat Finance"
+      content="Adding a spice to DeFi | Earn Rewards in $BNB  "
+    />
+    <title>MoonKat Finance</title>
+    <!--font-awesome icons link-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <!--main style file-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/custom__style.css" />
+    <link rel="stylesheet" href="./dist/flipdown.css" />
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="images/moonKat.jpg">
+
+  </head>
+
+  <body id="dark-mode">
+    <!-- Preloader Part Start -->
+    <div class="preloader">
+      <div class="frame">
+        <div class="center">
+          <div class="dot-1"></div>
+          <div class="dot-2"></div>
+          <div class="dot-3"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader Part End -->
+
+    <!-- HEADER AREA START -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">MoonKat<b>.</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <!-- <div class="header-social">
+          
+          <a href="https://twitter.com/moonkatBSC"
+            ><i class="fa fa-twitter" aria-hidden="true"></i
+          ></a>
+          <a href="https://t.me/moonkat_finance"
+            ><i class="fa fa-telegram" aria-hidden="true"></i
+          ></a>
+          <a href="https://medium.com/@moonkatfinance"
+            ><i class="fa fa-medium" aria-hidden="true"></i
+          ></a>
+        </div> -->
+       <!--  <div
+          class="collapse navbar-collapse menu-main"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ml-auto menu-item">
+            <li class="nav-item">
+              <a class="nav-link" href="#banner">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tokenomics">Tokenomics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bor" href="#">Launch Dapp</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+    <!-- HEADER AREA ENDS -->
+
+
+
+    <!-- CONTACT AREA START -->
+    <section class="connect-wallet">
+      <div class="container">
+        <div class="row">
+        <div class="col-sm-3">
+          
+        </div>
+        <div class="col-sm-6">
+          <div  class="section-2"><div  class="connect-to-wallet"><img  src="images/moonKat.jpg" class="logo-section"><div  class="text-show-1"> Welcome to MoonKat Dapp </div><div  class="content-main"><div  class="text-1"> You are not connected to MoonKat Dapp yet </div><div  class="line-2"> To use the Dapp, make sure: <br ><span >You are using the <span  class="text-color">Binance Smart Chain</span> network</span><br ><span >and you need to connect wallet to use</span><br ><div  style="margin-top: 10px;"><span > We suggest to use: </span><br >
+            <a  href="https://docs.binance.org/smart-chain/wallet/metamask.html" target="_blank"> Metamask</a><br >
+            <!-- <a  href="https://docs.binance.org/smart-chain/wallet/trustwallet.html" target="_blank"> TrustWallet</a><br > -->
+            <!-- <a  href="https://docs.binance.org/smart-chain/wallet/binance.html" target="_blank"> Binance Chain Extension Wallet</a><br > -->
+            <!-- <a  href="https://guide.moonrat.finance/how-to-connect-moonrats-dapp-to-wallet" target="_blank"> SafePal</a> -->
+            <!----></div></div></div><div  class="button-wrapper">
+            
+            <button  type="button" id="connectBtn" onclick="ConnectMetamask()" class="el-button button-custom-new el-button--primary el-button--medium"><i class="el-icon-connection"></i><span>Connect to a wallet </span></button>
+            <button  type="button" onclick="logout()" style="display: none" id="addressBtn" class="el-button button-custom-new el-button--primary el-button--medium"><i class="el-icon-connection"></i><span id="showAddress"> </span></button>
+
+            <!----></div><div  class="how-to-connect"><!-- <a  href="https://guide.MoonKat.finance/how-to-connect-MoonKats-dapp-to-wallet" target="_blank"> How to connect MoonKat's Dapp to wallet </a> --></div></div></div>
+        </div>
+        <div class="col-sm-3">
+          
+        </div>
+      </div>
+      
+      </div>
+    </section>
+    <!-- CONTACT AREA ENDS -->
+
+    <!-- FOOTER AREA START -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-11">
+            <div class="footer-logo">
+              <a class="f-logo" href="#banner"><b>MoonKat.</b></a>
+              <p>
+                Moonkat Finance is a next generation DeFi platform.
+                Earn $BNB by Holding $
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <div class="col-lg-2 col-sm-4">
+            <div class="links">
+              <h3>Overview</h3>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4">
+            <div class="links">
+              <h3>Information</h3>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#tokenomics">Tokenomics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-4">
+            <div class="links">
+              <h3>Help Desk</h3>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+
+    <!-- COPY_RIGHT AREA START -->
+    <section id="footer-btm">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="fop-btm text-center">
+              <h2>Copyright &copy; 2021. All rights reserved.</h2>
+            </div>
+            <div class="fop-btm text-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- COPY_RIGHT AREA END -->
+
+    <!-- Optional JavaScript -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/circular.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="./dist/flipdown.js"></script>
+    <script src="./js/customJs.js"></script>
+  </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+<script type="text/javascript">
+  // window.web3 = new Web3();
+  var ethereum = window.ethereum;
+  var web3 = new Web3(window.ethereum);
+
+async function ConnectMetamask(){
+    console.log(web3.eth.getAccounts[0])
+    if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+       var accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+       if(accounts[0]){
+         setAccount(accounts[0]);
+       }
+    }else{
+        alert('Please install MetaMask!');
+    }
+}
+
+
+function setAccount(add){
+  $('#connectBtn').hide();
+  var address =  add.toString().substring(0,6)+'...'+add.toString().substr(add.length-6);
+  $('#showAddress').html(address);
+  $('#addressBtn').show();
+  document.cookie = "address" + "=" + add;
+  if(web3.currentProvider.chainId == '0x38'){
+    window.location.href= "dashboard.html"
+  }
+}
+function logout(){
+    window.location.href= "dashboard.html"
+}
+
+ethereum.on('accountsChanged', function (accounts) {
+  setAccount(accounts[0]); 
+});
+
+ethereum.on('chainChanged',function (chainID) {
+  if(chainID == '0x38') {
+    window.location.href= "dashboard.html"
+  }else{
+
+    window.location.href= "connect-wallet-popup.html"
+  }
+
+});
+
+ethereum.on('close',function (accounts) {
+  window.location.href= "connect-wallet-popup.html"
+});
+
+if(getCookie('address')){
+      window.location.href= "dashboard.html"
+}  
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+// const account = accounts[0];
+</script>
